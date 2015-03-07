@@ -1,22 +1,42 @@
-<html>
-	<head>
-	<title>Jason Baker (jehb)</title>
-	<style>ul { list-style-type: none; }</style>
-	  <script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
-	  <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.0"></script>
-	  <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css'/>
-	  <script type="text/javascript">var map,layer;function initialize(){map=new OpenLayers.Map("map",{controls:[]});map.addLayer(layer=new OpenLayers.Layer.Stamen("watercolor"));map.setCenter(new OpenLayers.LonLat(-13630355,4546576),4);}
-	function panRandom(){x=Math.floor((Math.random()*400)-199);y=Math.floor((Math.random()*200)-99);map.pan(x,y);}</script>
-	  <style type="text/css">body{height:100%;width:100%;margin:0;font-family:sans-serif}#map{width:100%;height:100%;position:absolute;top:0;left:0}</style>
-	</head>
-	<body onload="initialize()">
-	  <div id="map"></div>
-	  <div id="thingie" style="position:relative; background: rgba(0,0,0,0.5); bottom:0px; width: 100%; text-align: center;"> <!-- last element in background controls opacity -->
-	  <ul>
-	  <li onmouseover="panRandom()"><a href="#"><span>Google Plus</span></a></li>
-	  <li onmouseover="panRandom()"><a href="http://www.twitter.com/jehb"><span>Twitter</span></a></li>
-	  <li onmouseover="panRandom()"><a href="#"><span>Facebook</span></a></li>
-	  <li onmouseover="panRandom()"><a href="#"><span>LinkedIn</span></a></li>
-	  </ul></div>
-  </body>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BigVideo.js - The jQuery Plugin for Big Background Video</title>
+    <meta name="description" content="BigVideo.js - The jQuery Plugin for Big Background Video" />
+    <meta name="author" content="John Polacek" />
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bower_components/BigVideo/css/bigvideo.css">
+</head>
+<body>
+    <div class="main">
+        <div id="overview" class="box">
+            <h1>BigVideo<span class="dimmed"><small>.</small>js</span></h1>
+            <h2>Simple Ambient Video Example</h2>
+        </div>
+    </div>
+
+    <!-- BigVideo Dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="bower_components/jquery/jquery.min.js"><\/script>')</script>
+    <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    <script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+    <script src="//vjs.zencdn.net/4.3/video.js"></script>
+
+    <!-- BigVideo -->
+    <script src="bower_components/BigVideo/lib/bigvideo.js"></script>
+
+    <!-- Demo -->
+    <script>
+	    $(function() {
+            var BV = new $.BigVideo();
+			BV.init();
+			BV.show('vids/river.mp4',{ambient:true});
+	    });
+    </script>
+</body>
 </html>

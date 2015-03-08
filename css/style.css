@@ -7,7 +7,6 @@ html, body {
 }
 h1, h2, .nav-link, .playlist-btn {
 	font-family:'Source Sans Pro', sans-serif; font-weight:900; 
-	text-transform:uppercase;
 }
 h1 {font-size:48px; }
 h1, h2, h3, p, li { margin:0 0 10px; color:#fff; text-shadow: 1px 1px 1px #000;}
